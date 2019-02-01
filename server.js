@@ -10,7 +10,15 @@ const app = express();
 
 require("./config/config.js")(app);
 
-models.sequelize.sync().then(function () {
+let syncOptions = { force: false };
+
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = true;
+}
+
+models.sequelize.sync(syncOptions).then(function () {
     console.log("\nDatabase ready \n");
     //Execute the listen method of the express server
     //instance, pass it the port we want for our server
