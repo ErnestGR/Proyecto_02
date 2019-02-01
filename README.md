@@ -1,9 +1,9 @@
-# Class Project
+# Class Project 02
 
 ## Installation
 Clone this project into your machine with:
 ```bash
-  git clone https://github.com/JahlHernandez/class_project.git
+  git clone https://github.com/ErnestGR/Proyecto_02.git
 ```
 
 Then to install the project dependencies open that directory inside your terminal and run:
