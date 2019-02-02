@@ -12,5 +12,13 @@ router.get("/", isAuthenticated, function (req, res) {
         username: req.user.firstName
     });
 });
+router.post("/", isAuthenticated, function (req, res) {
+    console.log(req.body);
+    //tell the client our response
+    //as siemple string "hey"
+    res.render("welcome.hbs", {
+        username: req.user.firstName
+    });
+});
 //prepare the file to output our router
 module.exports = router;

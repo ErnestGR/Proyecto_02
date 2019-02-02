@@ -1,12 +1,39 @@
-<form id="formSignUp" method="POST" action="/signup">
-    <label for="firstName">First Name:</label>
-    <input type="text" name="firstName" id="txtFirstName" />
-    <label for="lastName">Last Name:</label>
-    <input type="text" name="lastName" id="txtLastName" />
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="txtEmail" />
-    <label for="password">Password: </label>
-    <input type="password" name="password" id="txtPassword" />
-    <button type="submit">Sign Up</button>
+<link rel="stylesheet" href="styles/login.css">
+
+<form class="form-signin" action="/login" method="POST">
+    <div class="text-center mb-4">
+        <img class="mb-4" src="./Floating labels example for Bootstrap_files/bootstrap-solid.svg" alt="" width="72"
+            height="72">
+    </div>
+
+    <div class="form-group form-label-group">
+        <input type="text" id="inputEmail" class="form-control" name="firstName" placeholder="Email address" required=""
+            autofocus="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+        <label for="inputEmail">First Name:</label>
+    </div>
+
+    <div class="form-group form-label-group">
+        <input type="text" id="inputEmail" class="form-control" name="lastName" placeholder="mail address" required=""
+            autofocus="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+        <label for="inputEmail">Last Name: </label>
+    </div>
+
+    <div class="form-group form-label-group">
+        <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required=""
+            autofocus="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+        <label for="inputEmail">Email: </label>
+    </div>
+
+    <div class="form-group form-label-group">
+        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required=""
+            style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+        <label for="inputPassword">Password: </label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+    <br>
+    <div class="dropdown-divider"></div>
+    <a href="/login">Already have an account? Log In!</a>
+
+    <p class="mt-5 mb-3 text-muted text-center">© 2019</p>
 </form>
-<a href="/login">Already have an account? Log In!</a>

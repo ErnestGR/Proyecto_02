@@ -1,5 +1,291 @@
-<h1>Welcome, {{username}}</h1>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <a href="/logout">Log Out</a>
+</nav> 
 
-<p>This is the best page in the universe.</p>
+<h1>Lead Scoring</h1>
 
-<a href="/logout">Log Out</a>
+<h2></h2>
+
+<form action="/" method="POST">
+
+    <div class="box">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="card text-white bg-secondary  mb-3">
+                    <div class="card-header">Datos Básicos</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputName" name="inputName">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputCity" class="col-sm-2 col-form-label">Cuidad</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputCity" name="inputCity">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputCompany" class="col-sm-2 col-form-label">Empresa</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputCompany" name="inputCompany">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPosition" class="col-sm-2 col-form-label">Puesto</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputPosition" name="inputPosition">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputMobile" class="col-sm-2 col-form-label">Celular</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputMobile" name="inputMobile">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputEmail" name="inputEmail">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputHow" class="col-sm-2 col-form-label">¿Cómo se enteró de nosotros?</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputHow" name="inputHow">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div class="card text-white bg-info mb-3">
+                    <div class="card-header">Authority</div>
+                    <div class="card-body">
+                        <h5 class="card-title">¿Cuál es su cargo?</h5>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check01" name="customRadio1" class="custom-control-input" value="8">
+                            <label class="custom-control-label" for="check01">Director / C-level exec</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check02" name="customRadio1" class="custom-control-input" value="6">
+                            <label class="custom-control-label" for="check02">Compras</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check03" name="customRadio1" class="custom-control-input" value="4">
+                            <label class="custom-control-label" for="check03">Supervisor / Encargado de obra</label>
+                        </div>
+                         <div class="custom-control custom-radio">
+                            <input type="radio" id="check04" name="customRadio1" class="custom-control-input" value="2">
+                            <label class="custom-control-label" for="check04">Proyectos</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check05" name="customRadio1" class="custom-control-input" value="0">
+                            <label class="custom-control-label" for="check05">Ama de casa / Estudiante</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card text-white bg-info mb-3">
+                    <div class="card-header">Authority</div>
+                    <div class="card-body">
+                        <h5 class="card-title">¿Es usted quien tomará al decision de compra?</h5>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check06" name="customRadio2" class="custom-control-input" value="8">
+                            <label class="custom-control-label" for="check06">Si</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check07" name="customRadio2" class="custom-control-input" value="6">
+                            <label class="custom-control-label" for="check07">No, formo parte del grupo que
+                                toma la desición</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check08" name="customRadio2" class="custom-control-input" value="4">
+                            <label class="custom-control-label" for="check08">No, aconsejo a quienes toman la
+                                desición</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check09" name="customRadio2" class="custom-control-input" value="2">
+                            <label class="custom-control-label" for="check09">No, solo recopilo información</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card text-white bg-info mb-3">
+                    <div class="card-header">Authority</div>
+                    <div class="card-body">
+                        <h5 class="card-title">¿Conoce el proceso de compra?</h5>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check10" name="customRadio3" class="custom-control-input" value="8">
+                            <label class="custom-control-label" for="check10">Si lo conoce</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check11" name="customRadio3" class="custom-control-input" value="4">
+                            <label class="custom-control-label" for="check11">No lo conoce</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header">Budget</div>
+                    <div class="card-body">
+                        <h5 class="card-title">¿Requieren el material para una obra que están construyendo?</h5>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check12" name="customRadio4" class="custom-control-input" value="8">
+                            <label class="custom-control-label" for="check12">Si</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check13" name="customRadio4" class="custom-control-input" value="2">
+                            <label class="custom-control-label" for="check13">No, están en concurso</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check14" name="customRadio4" class="custom-control-input" value="0">
+                            <label class="custom-control-label" for="check14">No, están actualizando precios</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header">Budget</div>
+                    <div class="card-body">
+                        <h5 class="card-title">¿Sabe la cantidad de material o solo pide precio unitario?</h5>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check16" name="customRadio5" class="custom-control-input" value="8">
+                            <label class="custom-control-label" for="check16">Si, sabe</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check17" name="customRadio5" class="custom-control-input" value="4">
+                            <label class="custom-control-label" for="check17">No sabe solo quiere precio
+                                unitario</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header">Budget</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Buscar en internet (¿parece ser perqueña, mediana o grande?)</h5>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check18" name="customRadio6" class="custom-control-input" value="8">
+                            <label class="custom-control-label" for="check18">Grande</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check19" name="customRadio6" class="custom-control-input" value="6">
+                            <label class="custom-control-label" for="check19">Mediana</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check20" name="customRadio6" class="custom-control-input" value="4">
+                            <label class="custom-control-label" for="check20">Pequeña o no tiene sitio web</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <div class="card text-white bg-danger mb-3">
+                    <div class="card-header">Need</div>
+                    <div class="card-body">
+                        <h5 class="card-title">¿Manifiesta algún problema o reto?</h5>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check21" name="customRadio7" class="custom-control-input" value="8">
+                            <label class="custom-control-label" for="check21">Si urge asesoría técnica</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check22" name="customRadio7" class="custom-control-input" value="6">
+                            <label class="custom-control-label" for="check22">No, solo quiere la cotización</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card text-white bg-danger mb-3">
+                    <div class="card-header">Need</div>
+                    <div class="card-body">
+                        <h5 class="card-title">¿Hay algúna especificación?</h5>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check23" name="customRadio8" class="custom-control-input" value="8">
+                            <label class="custom-control-label" for="check23">Si, explicar</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check24" name="customRadio8" class="custom-control-input" value="6">
+                            <label class="custom-control-label" for="check24">No, cualquiera sirve</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-header">Timing</div>
+                    <div class="card-body">
+                        <h5 class="card-title">¿Manifiesta urgencia para adquirir los materiales?</h5>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check25" name="customRadio9" class="custom-control-input" value="8">
+                            <label class="custom-control-label" for="check25">Si</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check26" name="customRadio9" class="custom-control-input" value="4">
+                            <label class="custom-control-label" for="check26">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-header">Timing</div>
+                    <div class="card-body">
+                        <h5 class="card-title">¿En caso afirmativo ¿Para cuándo necesita realizar la compra?</h5>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check27" name="customRadio10" class="custom-control-input" value="8">
+                            <label class="custom-control-label" for="check27">Ya</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check28" name="customRadio10" class="custom-control-input" value="6">
+                            <label class="custom-control-label" for="check28">Esta semana</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="check29" name="customRadio10" class="custom-control-input" value="4">
+                            <label class="custom-control-label" for="check29">No sabe</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+
+    </div>
+
+</form>
