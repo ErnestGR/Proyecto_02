@@ -3,7 +3,7 @@ require("dotenv").config();
 //put it inside a variabloe named express
 const express = require("express");
 //the port for our express server.
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 //create a new express server instance and put
 //it inside a variable named app.
 const app = express();

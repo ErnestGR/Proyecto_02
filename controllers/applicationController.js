@@ -12,5 +12,30 @@ router.get("/", isAuthenticated, function (req, res) {
         username: req.user.firstName
     });
 });
+
+router.post("/proyecto",function(req,res){
+    let numbers = req.body.numbers;
+    let total = numbers.reduce((acc, number) => {
+        return acc + number;
+    }, 0);
+    
+    if (total >= 79 && total <= 80){
+        return res.send(JSON.stringify(total + "mvp"));
+        //console.log("mvp");
+
+    } else if (total >= 57 && total <= 78){
+        return res.send(JSON.stringify(total + "sql"));
+        //console.log("SQl");
+    }else if (total >= 36 && total <= 56){
+        return res.send(JSON.stringify(total+ "MQL"));
+        //console.log("MQL");
+
+    }else if (total <= 36){
+        return res.send(JSON.stringify(total +"Nac"));
+        //console.log("Nac");
+
+    }
+    
+})
 //prepare the file to output our router
 module.exports = router;
