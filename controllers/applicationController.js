@@ -13,7 +13,9 @@ router.get("/", isAuthenticated, function (req, res) {
     });
 });
 
-router.post("/proyecto",function(req,res){
+router.post("/", isAuthenticated, function (req, res) {
+    console.log(req.body);
+
     let numbers = req.body.numbers;
     let total = numbers.reduce((acc, number) => {
         return acc + number;
@@ -36,6 +38,12 @@ router.post("/proyecto",function(req,res){
 
     }
     
-})
+    //tell the client our response
+    //as siemple string "hey"
+    res.render("welcome.hbs", {
+        username: req.user.firstName
+    });
+});
+
 //prepare the file to output our router
 module.exports = router;
