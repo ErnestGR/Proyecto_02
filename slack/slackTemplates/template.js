@@ -5,8 +5,18 @@
  */
 const template = (data) => {
   console.log(data);
-  return { text: data.text,
-    username: data.username, };
+
+  const TEXT_TEMPLATE = `
+    a lead of type: ${data.text},
+    Nombre: ${data.name},
+    Compañia: ${data.company},
+    Puesto: ${data.position},
+    Celular: ${data.cellphone},
+    Email: ${data.email},
+    Origen: ${data.leadOrigin},
+    was found by ${data.username}
+  `;
+  return { text: TEXT_TEMPLATE, };
 };
 
 module.exports = template;

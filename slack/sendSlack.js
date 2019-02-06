@@ -1,4 +1,4 @@
-const axios = require(`axios`);
+const axios = require("axios");
 
 const slackTemplate = require("./slackTemplates/template");
 
@@ -13,11 +13,9 @@ const sendSlack = function(leadData) {
     axios.post('https://slack.com/api/chat.postMessage', qs.stringify(body))
     .then((response) => {
         console.log(response);
-        res.send("message sent")
     })
     .catch(error => {
          console.log(error);
-         res.send("could not sent message");
     });
 
 
