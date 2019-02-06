@@ -13,6 +13,7 @@ router.get("/", isAuthenticated, function (req, res) {
         username: req.user.firstName
     });
 });
+
 router.post("/", isAuthenticated, function (req, res) {
     console.log(req.body);
     var info = req.body;
@@ -69,5 +70,6 @@ if (type === "mvp" || type=== "sql"){
     //as siemple string "hey"
     res.send("Record Succesfully created")
 });
+
 //prepare the file to output our router
 module.exports = router;
