@@ -1,15 +1,24 @@
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <a href="/logout">Log Out</a>
-</nav> 
+<div class="container-fluid">
 
-<h1>Lead Scoring</h1>
+    <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+                <img class="mb-4" src="img/logo_abinco.png" alt="Abinco" width="40" height="40">
+            </div>
+            <div class="col-4 text-center">
+                <h1 class="blog-header-logo text-dark">LEAD SCORING</h1>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <a class="btn btn-sm btn-outline-secondary" href="/logout">LOG OUT</a>
+            </div>
+        </div>
+    </header>
 
-<h2></h2>
+    <div class="dropdown-divider"></div>
 
-<form action="/" method="POST">
+    <h1>Basic Info</h1>
 
-    <div class="box">
+    <form action="/" method="POST">
 
         <div class="row">
 
@@ -57,15 +66,15 @@
                             <div class="form-group row">
                                 <label for="inputHow" class="col-sm-2 col-form-label">¿Cómo se enteró de nosotros?</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputHow" name="inputHow">
+                                    <input type="text" class="form-control" id="inputEmail" name="inputEmail">
                                 </div>
+
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
         </div>
-
+        <h1>Questions</h1>
         <div class="row">
 
             <div class="col-sm-4">
@@ -83,9 +92,10 @@
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="check03" name="customRadio1" class="custom-control-input" value="4">
-                            <label class="custom-control-label" for="check03">Supervisor / Encargado de obra</label>
+                            <label class="custom-control-label" for="check03">Supervisor / Encargado de
+                                obra</label>
                         </div>
-                         <div class="custom-control custom-radio">
+                        <div class="custom-control custom-radio">
                             <input type="radio" id="check04" name="customRadio1" class="custom-control-input" value="2">
                             <label class="custom-control-label" for="check04">Proyectos</label>
                         </div>
@@ -113,7 +123,8 @@
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="check08" name="customRadio2" class="custom-control-input" value="4">
-                            <label class="custom-control-label" for="check08">No, aconsejo a quienes toman la
+                            <label class="custom-control-label" for="check08">No, aconsejo a quienes toman
+                                la
                                 desición</label>
                         </div>
                         <div class="custom-control custom-radio">
@@ -160,7 +171,8 @@
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="check14" name="customRadio4" class="custom-control-input" value="0">
-                            <label class="custom-control-label" for="check14">No, están actualizando precios</label>
+                            <label class="custom-control-label" for="check14">No, están actualizando
+                                precios</label>
                         </div>
                     </div>
                 </div>
@@ -267,7 +279,8 @@
                 <div class="card text-white bg-warning mb-3">
                     <div class="card-header">Timing</div>
                     <div class="card-body">
-                        <h5 class="card-title">¿En caso afirmativo ¿Para cuándo necesita realizar la compra?</h5>
+                        <h5 class="card-title">¿En caso afirmativo ¿Para cuándo necesita realizar la
+                            compra?</h5>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="check27" name="customRadio10" class="custom-control-input" value="8">
                             <label class="custom-control-label" for="check27">Ya</label>
@@ -285,7 +298,7 @@
             </div>
         </div>
         <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
-
-    </div>
-
-</form>
+    </form>
+</div>
+<div class="dropdown-divider"></div>
+<p class="mt-5 mb-3 text-muted text-center">© 2019</p>

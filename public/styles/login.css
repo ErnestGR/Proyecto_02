@@ -2,7 +2,9 @@
     --input-padding-x: .75rem;
     --input-padding-y: .75rem;
   }
-  
+  a{
+    text-align: center;
+  }
   html,
   body {
     height: 100%;

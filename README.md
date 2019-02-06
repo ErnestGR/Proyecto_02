@@ -1,4 +1,4 @@
-# Class Project 02
+# Project 02
 
 ## Installation
 Clone this project into your machine with:
