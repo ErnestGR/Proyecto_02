@@ -28,22 +28,54 @@ router.post("/proyecto",function(req,res){
     }, 0);
     
     if (total >= 79 && total <= 80){
-        return res.send(JSON.stringify(total + "mvp"));
+        var type = "mvp"
+        db.lead.update (
+            {type: type},
+            {
+            where:{
+                id: req.body.id
+            }
+        });
+        return res.send(JSON.stringify(total + type));
         //console.log("mvp");
 
     } else if (total >= 57 && total <= 78){
-        return res.send(JSON.stringify(total + "sql"));
+        var type = "sql"
+        db.lead.update (
+            {type: type},
+            {
+            where:{
+                id: req.body.id
+            }
+        });
+        return res.send(JSON.stringify(total + type));
         //console.log("SQl");
     }else if (total >= 36 && total <= 56){
-        return res.send(JSON.stringify(total+ "MQL"));
+        var type = "Mql"
+        db.lead.update (
+            {type: type},
+            {
+            where:{
+                id: req.body.id
+            }
+        });
+        return res.send(JSON.stringify(total+ type));
         //console.log("MQL");
 
     }else if (total <= 36){
-        return res.send(JSON.stringify(total +"Nac"));
+        var type = "Nac"
+        db.lead.update (
+            {type: type},
+            {
+            where:{
+                id: req.body.id
+            }
+        });
+        return res.send(JSON.stringify(total +type));
         //console.log("Nac");
 
     }
     
-})
+});
 //prepare the file to output our router
 module.exports = router;
