@@ -68,7 +68,12 @@ router.post("/", isAuthenticated, function (req, res) {
 
     //tell the client our response
     //as siemple string "hey"
-    res.redirect("/");
+    res.render("welcome.hbs", {
+        name: info.inputName,
+        type: type
+    });
+
+    /*res.redirect("/");*/
 });
 
 router.get("/leads", function (req, res) {
