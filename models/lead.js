@@ -7,10 +7,15 @@ module.exports = (sequelize, DataTypes) => {
     cellphone: DataTypes.STRING,
     email: DataTypes.STRING,
     leadOrigin: DataTypes.STRING,
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+    createdBy: DataTypes.INTEGER
   }, {});
-  Lead.associate = function(models) {
-    // associations can be defined here
+  Lead.associate = function (models) {
+    Lead.belongsTo(models.User, {
+      foreignKey: {
+        fieldName: 'createdBy'
+      }
+    });
   };
   return Lead;
 };

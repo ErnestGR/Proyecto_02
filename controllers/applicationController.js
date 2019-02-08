@@ -41,19 +41,18 @@ router.post("/", isAuthenticated, function (req, res) {
         //console.log("Nac");
 
     }
-if (type === "mvp" || type=== "sql"){
-    slackSend({
-        text: type,
-        username: req.user.firstName,
-        name: info.inputName,
-        company: info.inputCompany,
-        position: info.inputPosition,
-        cellphone: info.inputMobile,
-        email: info.inputEmail,
-        leadOrigin: info.inputHow,
-    });
-}
-  
+    if (type === "mvp" || type === "sql") {
+        slackSend({
+            text: type,
+            username: req.user.firstName,
+            name: info.inputName,
+            company: info.inputCompany,
+            position: info.inputPosition,
+            cellphone: info.inputMobile,
+            email: info.inputEmail,
+            leadOrigin: info.inputHow,
+        });
+    }
     models.Lead.create(
         {
             name: info.inputName,
@@ -62,13 +61,22 @@ if (type === "mvp" || type=== "sql"){
             cellphone: info.inputMobile,
             email: info.inputEmail,
             leadOrigin: info.inputHow,
-            type: type
+            type: type,
+            createdBy: req.user.id
         },
     );
 
     //tell the client our response
     //as siemple string "hey"
-    res.send("Record Succesfully created")
+    models.Lead
+        .findAll({
+            where: {
+                createdBy: req.user.id
+            },
+            include: [models.User]
+        }).then(function (leads) {
+            res.json(leads)
+        });
 });
 
 //prepare the file to output our router
