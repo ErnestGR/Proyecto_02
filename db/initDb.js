@@ -2,7 +2,19 @@ require('dotenv').config();
 
 const mysql = require('mysql2/promise');
 
-const databaseName = process.env.DATABASE_NAME;
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'sercav1575',
+    database: 'Prospectos_db'
+  });
+};
+
+
+/* const databaseName = process.env.DATABASE_NAME;
 //Start a connection with mysql
 mysql
 .createConnection({
@@ -20,4 +32,4 @@ mysql
    //End the script
    process.exit(0);
  });
-});
+}); */
