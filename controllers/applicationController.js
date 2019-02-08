@@ -68,6 +68,10 @@ router.post("/", isAuthenticated, function (req, res) {
 
     //tell the client our response
     //as siemple string "hey"
+    res.redirect("/");
+});
+
+router.get("/leads", function (req, res) {
     models.Lead
         .findAll({
             where: {
